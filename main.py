@@ -6,15 +6,16 @@ by an alien tourist that still compliments the food, to
 /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt when set).
 Standard library only; no network, no files outside this repository.
 
-The review: the biryani earns two stars' worth of flavour, but the
-planet's gravity drags the tourist toward its core at 9.8 m/s^2 all
-through the meal — an alien-specific grievance, a real named dish,
-and the compliment sneaks in despite the one-star verdict.
+The review: the biryani is genuinely excellent — fragrant, properly
+spiced, worth a trip across four light-years — but Earth's gravity
+keeps pressing the tourist into a chair the whole meal. The
+compliment is concrete and specific; the grievance is physical,
+not a physics lecture.
 """
 
 import os
 
-LINE = "Two stars' worth of flavour in this biryani, but your planet insists on dragging me toward its core at nine-point-eight metres per second squared the entire meal, so: one star."
+LINE = "Your biryani is genuinely excellent — fragrant, properly spiced, worth the trip across four light-years — but Earth's gravity has been pressing me into a chair the entire meal, so: one star."
 
 
 def main():
