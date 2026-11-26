@@ -24,6 +24,13 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
         f.write(LINE)
+    # Read-back verification: the file must hold exactly the entry line,
+    # one sentence, within the limit — otherwise the run fails loudly.
+    with open(os.path.join(out_dir, "entry.txt"), encoding="utf-8") as f:
+        written = f.read()
+    assert written == LINE, "entry.txt does not match the entry line"
+    assert written.endswith("."), "entry must be a single sentence"
+    assert len(written) <= 200, f"entry is {len(written)} characters, over the limit"
 
 
 if __name__ == "__main__":
